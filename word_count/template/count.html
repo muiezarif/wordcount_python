@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+</head>
+<body>
+<h1>Word Count is {{ count }}</h1>
+<a href="{% url 'home' %}">Start Again</a>
+<input type="submit" value="Try Again">
+<h2>Your Text</h2>
+{{ fulltext }}
+<h2>Word Count</h2>
+
+{% for word,count in dictionary %}
+<p>(Word = {{ word }} &ensp;Count = {{ count }})&ensp;</p>
+{% endfor %}
+
+</body>
+</html>
